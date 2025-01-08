@@ -6,3 +6,16 @@ Suggests: git2r, knitr, rmarkdown
 License: GPL (>= 2)
 MD5sum: 2e7107c8bc567c3e7d1aedbd7aaeb396
 NeedsCompilation: no
+
+Package: sds100
+Version: 0.0.0.9014
+Imports: chromote, cli, dplyr, exams, googlesheets4, httr, jsonlite,
+        knitr, later, parsermd, processx, purrr, quarto, rlang,
+        rstudio.prefs, rvest, stringr, tidyr, tidyselect, usethis,
+        xml2, yaml
+Suggests: fivethirtyeight, fontawesome, fs, here, janitor, mosaic,
+        mosaicData, openintro, palmerpenguins, remotes, skimr,
+        tidyverse (>= 2.0.0), testthat (>= 3.0.0), rmarkdown
+License: CC0
+MD5sum: 6bb6bcdf6dfc52fe1e5fa023e7a0b8e9
+NeedsCompilation: no
