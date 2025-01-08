@@ -1,38 +1,27 @@
+# SRAN: The *S*mith *R* *A*rchive *N*etwork
 
-## `drat` Repository for easy forking
+SRAN is an R package repository, similar to the well-known [CRAN](https://cran.r-project.org/web/packages/index.html) package repository. Its purpose is to provide a location for Smith College SDS faculty to distribute R packages. SRAN was created using [`{drat}`](https://github.com/eddelbuettel/drat/).
 
-`drat` ([CRAN](https://cran.r-project.org/package=drat), [GitHub](https://github.com/eddelbuettel/drat), [docs](https://eddelbuettel.github.io/drat)) makes it easy to host your own
-CRAN-like repositories for packages (or [data](https://journal.r-project.org/archive/2017/RJ-2017-026/index.html)).
+## Installing packages from SRAN
 
-Many users have started their own `drat` repo by forking the original [GitHub
-repo](https://github.com/eddelbuettel/drat) -- but as time passes this _code_ repo
-accumulates more _code_ for `drat`, as well as
-[documentation](https://eddelbuettel.github.io/drat)
- making it less of an ideal place to start for _your own_ repo.  So this repo offers an alternative:
+If you want to install a package from SRAN, first add SRAN to your list of R package repositories.
 
-- Just fork this repo into your own domain, and you have a working `drat`
- repo.
-- Enable [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages)
- with the `docs/` folder in the main branch:
+```r
+options("repos" = c(options("repos"), "https://SmithCollege-SDS.github.io/SRAN/"))
+```
 
- ![](https://github.blog/wp-content/uploads/2016/08/47c2ecc4-6533-11e6-828a-91980daa7297.gif)
+Then, use the `install.packages()` function to install the packages you want. For example, you could install the [sds100](https://github.com/SmithCollege-SDS/sds100/) package by running the command:
 
-Note, however, that you currently **must** use the `drat` package directly
-from its [GitHub repo](https://github.com/eddelbuettel/drat) in order to use
-GitHub Pages off `docs/` in the main branch---and you need to enable this,
-e.g. via `options(dratBranch="docs")` as the _released_ version only supports
-a `gh-pages` branch.  So in a sense this repo is currently "experimental" as
-is the support in the not-yet-released `drat` version.
+```r
+install.packages("sds100")
+```
 
-This repo was initiated (using command `dratPackage()`) with the source and
-windows binary of the last CRAN release of `drat`. You can delete either or
-both (for example via command `pruneRepo()`) and then
-add your own (via `insertPackage()`). 
+## Advantages of using SRAN to distribute your package
 
-### Author
+Because SRAN is a "proper" package repository, using SRAN to distribute your package has several advantages other methods of distributing packages.
 
-Dirk Eddelbuettel
+1. Users can install SRAN packages using only "base" R functions
+2. Packages installed from SRAN have an upgrade path
+3. Authors of other packages (including yourself!) can easily depend on a package distributed from SRAN
 
-### License
-
-GPL (>= 2)
+Of course, you can achieve all of these features by submitting your package to CRAN as well, but this comes with stricter requirements and maintenance responsibilities that may not be worth it to take on.
