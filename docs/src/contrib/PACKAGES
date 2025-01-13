@@ -1,11 +1,24 @@
 Package: sds100
 Version: 0.0.0.9014
 Imports: chromote, cli, dplyr, exams, googlesheets4, httr, jsonlite, knitr,
-        later, parsermd, processx, purrr, quarto, rlang, rstudio.prefs, rvest,
-        stringr, tidyr, tidyselect, usethis, xml2, yaml
-Suggests: fivethirtyeight, fontawesome, fs, here, janitor, mosaic, mosaicData,
-        openintro, palmerpenguins, remotes, skimr, tidyverse (>= 2.0.0),
-        testthat (>= 3.0.0), rmarkdown
+        later, parsermd, processx, purrr, quarto, rlang, rstudio.prefs,
+        rvest, stringr, tidyr, tidyselect, usethis, xml2, yaml
+Suggests: fivethirtyeight, fontawesome, fs, here, janitor, mosaic,
+        mosaicData, openintro, palmerpenguins, remotes, skimr, tidyverse
+        (>= 2.0.0), testthat (>= 3.0.0), rmarkdown
 License: CC0
 MD5sum: 6bb6bcdf6dfc52fe1e5fa023e7a0b8e9
+NeedsCompilation: no
+
+Package: sds100
+Version: 1.0.0
+Imports: chromote, cli, dplyr, exams, googlesheets4, httr, jsonlite, knitr,
+        later, pandoc, parsermd, processx, purrr, quarto, rlang,
+        rstudio.prefs, rvest, stringr, tidyr, tidyselect, usethis, xml2,
+        yaml
+Suggests: fivethirtyeight, fontawesome, fs, here, janitor, mosaic,
+        mosaicData, openintro, palmerpenguins, remotes, skimr, tidyverse
+        (>= 2.0.0), testthat (>= 3.0.0), rmarkdown
+License: CC0
+MD5sum: 060702bb03463a7fcb13801ecd4019c8
 NeedsCompilation: no
